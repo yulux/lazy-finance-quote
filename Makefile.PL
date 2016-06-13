@@ -29,7 +29,7 @@ WriteMakefile(
   },
   PREREQ_PM => {
     'Mojolicious' => '6.64',
-    'Mouse' => '2.45',
+    'Mouse' => '2.4.5',
     'Catmandu' => '1.0201',
     'Catmandu::Store::DBI' => '0.0506',
     'XML::Simple' => '2.22',
