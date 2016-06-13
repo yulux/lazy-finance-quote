@@ -6,7 +6,7 @@
 
 ## Prereq
 
-  libxml2-dev
+  libxml2-dev, curl, and maybe more
 
 ## Prepare Perl environment from scratch
 
