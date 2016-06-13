@@ -14,8 +14,9 @@ env:
     - TEST_SOCKS=1
     - TEST_TLS=1
 install:
-  - cpanm -n EV IO::Socket::Socks IO::Socket::SSL Net::DNS::Native Test::Pod Test::Pod::Coverage
+  - cpanm -n EV IO::Socket::Socks IO::Socket::SSL Net::DNS::Native Test::Pod Test::Pod::Coverage Mouse
   - cpanm -n --installdeps .
 sudo: false
 notifications:
 email: false
+after_failure: cat /home/travis/.cpanm/build.log
