@@ -1,4 +1,6 @@
-2e64b0a 2016-06-13 limodev (HEAD, origin/master, master) Fix documentation
+c6a9aff 2016-06-13 limodev (HEAD, origin/master, master) Return default hash as json
+ba51d02 2016-06-13 limodev Fix Changes
+2e64b0a 2016-06-13 limodev Fix documentation
 29830ae 2016-06-13 limodev Fix documentation
 2bd7dcd 2016-06-13 limodev Fix documentation
 7779660 2016-06-13 limodev Add more documentation
