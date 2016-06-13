@@ -10,8 +10,6 @@
 
 ## Prepare perl environment from scratch
 
-  Prepare non-root perl environment
-
 	cd ~
 	\curl -L https://install.perlbrew.pl | bash
 	echo "source ~/perl5/perlbrew/etc/bashrc" >> .bashrc
