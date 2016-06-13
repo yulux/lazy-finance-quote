@@ -34,7 +34,7 @@
 
 	$ hypnotoad -s $(which lazyfq)
 
-## Get quote, e.g. from Apple Inc. (AAPL) - NasdaqGS, as flattened hash
+## Get quote, e.g. from Apple Inc. (AAPL) - NasdaqGS
 
 	$ curl -s localhost:8080/finance/yahoo/AAPL
 
