@@ -7,7 +7,7 @@ use ExtUtils::MakeMaker;
 
 WriteMakefile(
   NAME         => 'lazy-finance-quote',
-  VERSION_FROM => 'lib/Lazy::Finance::Quote.pm',
+  VERSION_FROM => 'lib/Lazy/Finance/Quote.pm',
   ABSTRACT     => 'ClI interface for processing quote symbols from query.yahooapis.com',
   AUTHOR       => 'Michael Kapp <limodev@yulux.de>',
   LICENSE      => 'artistic_2',
