@@ -1,6 +1,6 @@
 # lazy-finance-quote [![Build Status](https://api.travis-ci.org/yulux/lazy-finance-quote.svg?branch=master)](https://travis-ci.org/yulux/lazy-finance-quote)
 
-  A CLI app for yahoo finance api
+  A Linux CLI app for yahoo finance api
 
 ## (development version)
 
