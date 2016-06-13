@@ -25,15 +25,15 @@
 	* perl-5.20.3
 	perlbrew install-cpanm
 
-## Install application with cpanm
+## Install app with cpanm
 
 	cpanm https://github.com/yulux/lazy-finance-quote.git
 
-## Start application
+## Start app
 
 	hypnotoad $(which lazyfq)
 
-## Stop application
+## Stop app
 
 	hypnotoad -s $(which lazyfq)
 
