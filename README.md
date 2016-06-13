@@ -1,6 +1,6 @@
 # lazy-finance-quote [![Build Status](https://api.travis-ci.org/yulux/lazy-finance-quote.svg?branch=master)](https://travis-ci.org/yulux/lazy-finance-quote)
 
-  CLI app for yahoo finance api
+  A tiny CLI app for yahoo finance api
 
 ## (development version)
 
@@ -36,4 +36,4 @@
 
 ## Get quote, e.g. from Apple Inc. (AAPL) - NasdaqGS 
 
-  $ curl -s localhost:8080/finance/yahoo/AAPL
+	$ curl -s localhost:8080/finance/yahoo/AAPL
