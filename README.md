@@ -38,7 +38,8 @@
 
 	$ curl -s localhost:8080/finance/yahoo/AAPL
 
-## Actual Result, this datastructure will change
+## Actual Result is a flattened hash, serialization format will change
+ 
 ```
 {
    "data" : {
