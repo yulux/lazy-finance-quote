@@ -38,7 +38,7 @@
 
 	$ curl -s localhost:8080/finance/yahoo/AAPL
 
-## Actual Result is a flattened hash, serialization format will change
+## The data hash contains the result - as is - from the yahoo finance api
  
 ```
 {
