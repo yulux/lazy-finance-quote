@@ -19,4 +19,4 @@ install:
 sudo: false
 notifications:
 email: false
-after_failure: cat /home/travis/.cpanm/build.log
+after_failure: cat /home/travis/.cpanm/work/*/build.log
