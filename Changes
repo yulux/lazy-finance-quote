@@ -1,4 +1,10 @@
-c6a9aff 2016-06-13 limodev (HEAD, origin/master, master) Return default hash as json
+c73a51e 2016-06-13 limodev (HEAD, origin/master, master) More basic tests
+a5f419d 2016-06-13 limodev Fix documentation
+7323244 2016-06-13 limodev Fix documentation
+8a8ec47 2016-06-13 limodev Fix documentation
+eaca9dc 2016-06-13 limodev Change get request to default result as json, as is from yahoo api
+16b0652 2016-06-13 limodev Fix Changes
+c6a9aff 2016-06-13 limodev Return default hash as json
 ba51d02 2016-06-13 limodev Fix Changes
 2e64b0a 2016-06-13 limodev Fix documentation
 29830ae 2016-06-13 limodev Fix documentation
