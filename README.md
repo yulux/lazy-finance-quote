@@ -42,69 +42,275 @@
  
 ```
 {
-   "data" : {
-      "query:0.results:0.quote:0.Name:0" : "Apple Inc.",
-      "query:0.results:0.quote:0.DaysHigh:0" : "99.35",
-      "query:0.results:0.quote:0.LastTradeTime:0" : "4:00pm",
-      "query:0.xmlns\\:yahoo" : "http://www.yahooapis.com/v1/base.rng",
-      "query:0.results:0.quote:0.PercentChangeFromYearLow:0" : "+10.46%",
-      "query:0.results:0.quote:0.StockExchange:0" : "NMS",
-      "query:0.results:0.quote:0.ShortRatio:0" : "1.18",
-      "query:0.results:0.quote:0.OneyrTargetPrice:0" : "124.93",
-      "query:0.results:0.quote:0.Ask:0" : "98.95",
-      "query:0.results:0.quote:0.Bid:0" : "98.90",
-      "query:0.results:0.quote:0.DividendShare:0" : "2.28",
-      "query:0.results:0.quote:0.PERatio:0" : "11.00",
-      "query:0.results:0.quote:0.Volume:0" : "31712936",
-      "query:0.results:0.quote:0.PercentChangeFromTwoHundreddayMovingAverage:0" : "-3.63%",
-      "query:0.yahoo\\:lang" : "en-US",
-      "query:0.results:0.quote:0.DaysLow:0" : "98.48",
-      "query:0.results:0.quote:0.ChangeinPercent:0" : "-0.82%",
-      "query:0.results:0.quote:0.DividendYield:0" : "2.31",
-      "query:0.results:0.quote:0.DividendPayDate:0" : "2/11/2016",
-      "query:0.results:0.quote:0.symbol" : "AAPL",
-      "query:0.results:0.quote:0.TwoHundreddayMovingAverage:0" : "102.56",
-      "query:0.results:0.quote:0.Change:0" : "-0.82",
-      "query:0.results:0.quote:0.PriceBook:0" : "4.18",
-      "query:0.yahoo\\:count" : "1",
-      "query:0.results:0.quote:0.EarningsShare:0" : "8.98",
-      "query:0.yahoo\\:created" : "2016-06-13T11:00:29Z",
-      "query:0.results:0.quote:0.EPSEstimateNextYear:0" : "9.11",
-      "query:0.results:0.quote:0.Change_PercentChange:0" : "-0.82 - -0.82%",
-      "query:0.results:0.quote:0.EPSEstimateNextQuarter:0" : "1.66",
-      "query:0.results:0.quote:0.PriceEPSEstimateCurrentYear:0" : "11.94",
-      "query:0.results:0.quote:0.EPSEstimateCurrentYear:0" : "8.28",
-      "query:0.results:0.quote:0.AverageDailyVolume:0" : "38160100",
-      "query:0.results:0.quote:0.YearRange:0" : "89.47 - 132.97",
-      "query:0.results:0.quote:0.LastTradePriceOnly:0" : "98.83",
-      "query:0.results:0.quote:0.Currency:0" : "USD",
-      "query:0.results:0.quote:0.PercentChangeFromFiftydayMovingAverage:0" : "+1.91%",
-      "query:0.results:0.quote:0.LastTradeWithTime:0" : "4:00pm - <b>98.83</b>",
-      "query:0.results:0.quote:0.EBITDA:0" : "78.50B",
-      "query:0.results:0.quote:0.ChangeFromTwoHundreddayMovingAverage:0" : "-3.73",
-      "query:0.results:0.quote:0.PriceSales:0" : "2.40",
-      "query:0.results:0.quote:0.PreviousClose:0" : "99.65",
-      "query:0.results:0.quote:0.YearHigh:0" : "132.97",
-      "query:0.results:0.quote:0.PriceEPSEstimateNextYear:0" : "10.85",
-      "query:0.results:0.quote:0.MarketCapitalization:0" : "541.33B",
-      "query:0.results:0.quote:0.BookValue:0" : "23.81",
-      "query:0.results:0.quote:0.LastTradeDate:0" : "6/10/2016",
-      "query:0.results:0.quote:0.ChangeFromFiftydayMovingAverage:0" : "1.85",
-      "query:0.results:0.quote:0.PercebtChangeFromYearHigh:0" : "-25.67%",
-      "query:0.results:0.quote:0.Open:0" : "98.51",
-      "query:0.results:0.quote:0.Symbol:0" : "AAPL",
-      "query:0.results:0.quote:0.YearLow:0" : "89.47",
-      "query:0.results:0.quote:0.ChangeFromYearHigh:0" : "-34.14",
-      "query:0.results:0.quote:0.ChangeFromYearLow:0" : "9.36",
-      "query:0.results:0.quote:0.PercentChange:0" : "-0.82%",
-      "query:0.results:0.quote:0.ExDividendDate:0" : "5/5/2016",
-      "query:0.results:0.quote:0.DaysRange:0" : "98.48 - 99.35",
-      "query:0.results:0.quote:0.FiftydayMovingAverage:0" : "96.98",
-      "query:0.results:0.quote:0.PEGRatio:0" : "1.29"
-   },
+   "time_stamp" : 1465816826,
    "symbol" : "AAPL",
-   "time_stamp" : 1465815629,
+   "data" : {
+      "query" : [
+         {
+            "results" : [
+               {
+                  "quote" : [
+                     {
+                        "StockExchange" : [
+                           "NMS"
+                        ],
+                        "PercentChangeFromYearLow" : [
+                           "+10.46%"
+                        ],
+                        "PercentChangeFromTwoHundreddayMovingAverage" : [
+                           "-3.63%"
+                        ],
+                        "HoldingsGainPercentRealtime" : [
+                           {}
+                        ],
+                        "DaysLow" : [
+                           "98.48"
+                        ],
+                        "Symbol" : [
+                           "AAPL"
+                        ],
+                        "HoldingsGainPercent" : [
+                           {}
+                        ],
+                        "HoldingsGainRealtime" : [
+                           {}
+                        ],
+                        "PreviousClose" : [
+                           "99.65"
+                        ],
+                        "BidRealtime" : [
+                           {}
+                        ],
+                        "PercentChangeFromFiftydayMovingAverage" : [
+                           "+1.91%"
+                        ],
+                        "Change" : [
+                           "-0.82"
+                        ],
+                        "LastTradeDate" : [
+                           "6/10/2016"
+                        ],
+                        "DaysHigh" : [
+                           "99.35"
+                        ],
+                        "Change_PercentChange" : [
+                           "-0.82 - -0.82%"
+                        ],
+                        "BookValue" : [
+                           "23.81"
+                        ],
+                        "TradeDate" : [
+                           {}
+                        ],
+                        "PERatioRealtime" : [
+                           {}
+                        ],
+                        "LastTradeRealtimeWithTime" : [
+                           {}
+                        ],
+                        "ChangeRealtime" : [
+                           {}
+                        ],
+                        "ExDividendDate" : [
+                           "5/5/2016"
+                        ],
+                        "YearRange" : [
+                           "89.47 - 132.97"
+                        ],
+                        "MarketCapRealtime" : [
+                           {}
+                        ],
+                        "HoldingsValueRealtime" : [
+                           {}
+                        ],
+                        "AverageDailyVolume" : [
+                           "38160100"
+                        ],
+                        "TickerTrend" : [
+                           {}
+                        ],
+                        "PEGRatio" : [
+                           "1.29"
+                        ],
+                        "symbol" : "AAPL",
+                        "YearHigh" : [
+                           "132.97"
+                        ],
+                        "HoldingsGain" : [
+                           {}
+                        ],
+                        "PERatio" : [
+                           "11.00"
+                        ],
+                        "EBITDA" : [
+                           "78.50B"
+                        ],
+                        "DaysValueChangeRealtime" : [
+                           {}
+                        ],
+                        "ErrorIndicationreturnedforsymbolchangedinvalid" : [
+                           {}
+                        ],
+                        "OrderBookRealtime" : [
+                           {}
+                        ],
+                        "ChangeFromYearHigh" : [
+                           "-34.14"
+                        ],
+                        "Name" : [
+                           "Apple Inc."
+                        ],
+                        "DaysRange" : [
+                           "98.48 - 99.35"
+                        ],
+                        "AfterHoursChangeRealtime" : [
+                           {}
+                        ],
+                        "PercebtChangeFromYearHigh" : [
+                           "-25.67%"
+                        ],
+                        "AskRealtime" : [
+                           {}
+                        ],
+                        "Ask" : [
+                           "98.95"
+                        ],
+                        "ChangeFromTwoHundreddayMovingAverage" : [
+                           "-3.73"
+                        ],
+                        "LastTradePriceOnly" : [
+                           "98.83"
+                        ],
+                        "EPSEstimateNextQuarter" : [
+                           "1.66"
+                        ],
+                        "Open" : [
+                           "98.51"
+                        ],
+                        "DividendYield" : [
+                           "2.31"
+                        ],
+                        "DaysValueChange" : [
+                           {}
+                        ],
+                        "Notes" : [
+                           {}
+                        ],
+                        "PriceBook" : [
+                           "4.18"
+                        ],
+                        "PercentChange" : [
+                           "-0.82%"
+                        ],
+                        "DividendPayDate" : [
+                           "2/11/2016"
+                        ],
+                        "PriceEPSEstimateNextYear" : [
+                           "10.85"
+                        ],
+                        "Bid" : [
+                           "98.90"
+                        ],
+                        "OneyrTargetPrice" : [
+                           "124.93"
+                        ],
+                        "Volume" : [
+                           "31712936"
+                        ],
+                        "Commission" : [
+                           {}
+                        ],
+                        "FiftydayMovingAverage" : [
+                           "96.98"
+                        ],
+                        "YearLow" : [
+                           "89.47"
+                        ],
+                        "LastTradeTime" : [
+                           "4:00pm"
+                        ],
+                        "PriceSales" : [
+                           "2.40"
+                        ],
+                        "DividendShare" : [
+                           "2.28"
+                        ],
+                        "MarketCapitalization" : [
+                           "541.33B"
+                        ],
+                        "TwoHundreddayMovingAverage" : [
+                           "102.56"
+                        ],
+                        "HoldingsValue" : [
+                           {}
+                        ],
+                        "ShortRatio" : [
+                           "1.18"
+                        ],
+                        "ChangeFromFiftydayMovingAverage" : [
+                           "1.85"
+                        ],
+                        "EPSEstimateCurrentYear" : [
+                           "8.28"
+                        ],
+                        "Currency" : [
+                           "USD"
+                        ],
+                        "MoreInfo" : [
+                           {}
+                        ],
+                        "EarningsShare" : [
+                           "8.98"
+                        ],
+                        "ChangeFromYearLow" : [
+                           "9.36"
+                        ],
+                        "SharesOwned" : [
+                           {}
+                        ],
+                        "PricePaid" : [
+                           {}
+                        ],
+                        "LowLimit" : [
+                           {}
+                        ],
+                        "HighLimit" : [
+                           {}
+                        ],
+                        "EPSEstimateNextYear" : [
+                           "9.11"
+                        ],
+                        "AnnualizedGain" : [
+                           {}
+                        ],
+                        "ChangePercentRealtime" : [
+                           {}
+                        ],
+                        "PriceEPSEstimateCurrentYear" : [
+                           "11.94"
+                        ],
+                        "DaysRangeRealtime" : [
+                           {}
+                        ],
+                        "LastTradeWithTime" : [
+                           "4:00pm - <b>98.83</b>"
+                        ],
+                        "ChangeinPercent" : [
+                           "-0.82%"
+                        ]
+                     }
+                  ]
+               }
+            ],
+            "yahoo:created" : "2016-06-13T11:20:25Z",
+            "xmlns:yahoo" : "http://www.yahooapis.com/v1/base.rng",
+            "yahoo:count" : "1",
+            "yahoo:lang" : "en-US"
+         }
+      ]
+   },
    "provider" : "yahoo"
 }
+
 ```
  
