@@ -38,7 +38,7 @@
 
 	$ curl -s localhost:8080/finance/yahoo/AAPL
 
-## The data hash contains the result - as is - from the yahoo finance api
+## The JSON data hash contains the result - as is - from the yahoo finance api
  
 ```
 {
