@@ -35,6 +35,7 @@ WriteMakefile(
     'XML::Simple' => '2.22',
     'Hash::Flatten' => '1.19',
     'CryptX' => '0.036',
+    'JSON::XS' => '3.02',
   },
   EXE_FILES => ['script/lazyfq'],
   test => {TESTS => 't/*.t t/*/*.t'}

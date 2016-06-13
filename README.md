@@ -1,4 +1,4 @@
-# lazy-finance-quote (development version)
+# lazy-finance-quote (development version, api can change anytime)
 
   CLI app for yahoo finance api
 
@@ -23,3 +23,15 @@
 	$ * perl-5.20.3
 	$ perlbrew install-cpanm
 	$ cpanm https://github.com/yulux/lazy-finance-quote.git
+
+## Start application
+
+	$ hypnotoad $(which lazyfq)
+
+## Stop application
+
+	$ hypnotoad -s $(which lazyfq)
+
+## Get quote, e.g. from Apple Inc. (AAPL) - NasdaqGS 
+
+  $ curl -s localhost:8080/finance/yahoo/AAPL
