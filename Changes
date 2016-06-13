@@ -1,5 +1,15 @@
-7512b56 2016-06-13 limodev (HEAD, master) Add documentation
-358ec15 2016-06-13 limodev (origin/master) Changes
+2e64b0a 2016-06-13 limodev (HEAD, origin/master, master) Fix documentation
+29830ae 2016-06-13 limodev Fix documentation
+2bd7dcd 2016-06-13 limodev Fix documentation
+7779660 2016-06-13 limodev Add more documentation
+f7e376e 2016-06-13 limodev Fix README.md
+9732963 2016-06-13 limodev Fix README.md
+1222a6a 2016-06-13 limodev Makefile.PL added JSON::XS, README.md example
+2e561cc 2016-06-13 limodev Fix typo in README.md
+1347463 2016-06-13 limodev Fix typo in README.md
+a3150ca 2016-06-13 limodev Fix typo in Makefile.PL
+7512b56 2016-06-13 limodev Add documentation
+358ec15 2016-06-13 limodev Changes
 109b155 2016-06-13 limodev Fix Mouse prefix v, Changes
 aedcfbe 2016-06-13 limodev Fix Mouse version in Makefile.PL
 4f1dd83 2016-06-13 limodev Show cpanm build log after failer
