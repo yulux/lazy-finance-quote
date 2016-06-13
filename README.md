@@ -8,7 +8,7 @@
 
   libxml2-dev
 
-## Prepare perl environment from scratch
+## Prepare Perl environment from scratch
 
 	cd ~
 	\curl -L https://install.perlbrew.pl | bash
