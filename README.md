@@ -8,7 +8,7 @@
 
   libxml2-dev
 
-## Installation from scratch
+## Prepare perl environment from scratch
 
   Prepare non-root perl environment
 
@@ -24,6 +24,9 @@
 	$ perlbrew list
 	$ * perl-5.20.3
 	$ perlbrew install-cpanm
+
+## Install application with cpanm
+
 	$ cpanm https://github.com/yulux/lazy-finance-quote.git
 
 ## Start application
