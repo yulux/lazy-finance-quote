@@ -25,8 +25,9 @@ sub query {
   );
   my $xml = $ua->get($sql_url)->res->content->asset->slurp;
   my $xml_ds = $xmls->XMLin($xml);
-  my $flat_hash = flatten($xml_ds);
-  return $flat_hash if $flat_hash;
+  ## my $flat_hash = flatten($xml_ds);
+  ## return $flat_hash if $flat_hash;
+  return $xml_ds if $xml_ds;
   return undef;
 }
 
