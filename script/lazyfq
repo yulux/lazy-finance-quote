@@ -1,0 +1,109 @@
+#!/usr/bin/env perl
+
+use strict;
+use warnings;
+use Crypt::PRNG qw(random_string);
+
+use Mojolicious::Lite;
+
+use lib 'lib';
+use Lazy::Finance::Quote;
+
+helper lfq => sub { state $lfq = Lazy::Finance::Quote->new };
+
+get '/' => sub {
+  my $c   = shift;
+  return $c->render(
+    json => {
+      status => 'alive'
+    }
+  );
+};
+
+get '/finance/:provider' => sub {
+  my $c   = shift;
+  my $provider = $c->param('provider');
+  my $provider_data = $c->lfq->get_id($provider);
+  return $c->render(
+    json => {
+      provider => $provider_data
+    }
+  );
+};
+
+get '/finance/:yahoo/#symbol' => sub {
+  my $c   = shift;
+  my $provider = $c->param('yahoo');
+  my $symbol   = $c->param('symbol');
+  my $data     = $c->lfq->query($symbol);
+  return $c->render(
+    json => {
+      provider => $provider,
+      symbol => $symbol,
+      time_stamp => time(),
+      data => $data}
+    );
+};
+
+app->secrets([random_string(64)]); 
+app->start;
+
+=encoding utf8
+
+=head1 NAME
+
+lazyfq - process quotes (development version). API can change any time.
+
+=head1 SYNOPSIS
+
+  Usage: lazyfq [OPTIONS] [APPLICATION]
+
+    hypnotoad ./script/lazyfq
+    hypnotoad -s ./script/lazyfq
+
+  Options:
+    -f, --foreground   Keep manager process in foreground
+    -h, --help         Show this message
+    -s, --stop         Stop server gracefully
+    -t, --test         Test application and exit
+
+=head1 DESCRIPTION
+
+Start L<lazyfq application with the
+L<Mojo::Server::Hypnotoad> web server.
+
+Start server to get a quote.
+
+hypnotoad lazyfq
+
+Check if the server is responding:
+
+curl -s localhost:3000/
+
+Check if provider is existent (1 => true, null => false):
+
+curl -s localhost:3000/finance/yahoo
+
+Get e.g. apple quote:
+
+curl -s localhost:3000/finance/yahoo/AAPL
+
+=head1 SEE ALSO
+
+L<Mojolicious>.
+
+=cut
+
+__DATA__
+
+@@ not_found.development.html.ep
+<h1>dev: 404</h1>
+
+@@ not_found.html.ep
+<h1>prod: 404</h1>
+
+@@ exception.development.html.ep
+<h1>dev: 400</h1>
+
+@@ exception.html.ep
+<h1>prod: 400</h1>
