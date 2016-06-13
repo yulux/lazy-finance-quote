@@ -12,34 +12,34 @@
 
   Prepare non-root perl environment
 
-	$ cd ~
-	$ \curl -L https://install.perlbrew.pl | bash
-	$ echo "source ~/perl5/perlbrew/etc/bashrc" >> .bashrc
-	$ source ~/perl5/perlbrew/etc/bashrc
-	$ perlbrew -n install perl-5.20.3
-	$ tail -f ~/perl5/perlbrew/build.perl-5.20.3.log
-	$ perlbrew list
-	$   perl-5.20.3
-	$ perlbrew switch perl-5.20.3
-	$ perlbrew list
-	$ * perl-5.20.3
-	$ perlbrew install-cpanm
+	cd ~
+	\curl -L https://install.perlbrew.pl | bash
+	echo "source ~/perl5/perlbrew/etc/bashrc" >> .bashrc
+	source ~/perl5/perlbrew/etc/bashrc
+	perlbrew -n install perl-5.20.3
+	tail -f ~/perl5/perlbrew/build.perl-5.20.3.log
+	perlbrew list
+	  perl-5.20.3
+	perlbrew switch perl-5.20.3
+	perlbrew list
+	* perl-5.20.3
+	perlbrew install-cpanm
 
 ## Install application with cpanm
 
-	$ cpanm https://github.com/yulux/lazy-finance-quote.git
+	cpanm https://github.com/yulux/lazy-finance-quote.git
 
 ## Start application
 
-	$ hypnotoad $(which lazyfq)
+	hypnotoad $(which lazyfq)
 
 ## Stop application
 
-	$ hypnotoad -s $(which lazyfq)
+	hypnotoad -s $(which lazyfq)
 
 ## Get quote, e.g. from Apple Inc. (AAPL) - NasdaqGS
 
-	$ curl -s localhost:8080/finance/yahoo/AAPL
+	curl -s localhost:8080/finance/yahoo/AAPL
 
 ## The JSON data hash contains the result - as is - from the yahoo finance api
  
