@@ -1,1 +1,8 @@
-4784170 2016-06-11 limodev (HEAD, origin/master, master) first commit
+aedcfbe 2016-06-13 limodev (HEAD, origin/master, master) Fix Mouse version in Makefile.PL
+4f1dd83 2016-06-13 limodev Show cpanm build log after failer
+6c8ab99 2016-06-13 limodev Add dep Mouse to travis.yml
+7d2ce9e 2016-06-13 limodev Fix Makefile.PL version path
+6ab7787 2016-06-13 limodev Change Perl version to 5.20
+76ca62b 2016-06-13 limodev Add files
+dac88a0 2016-06-13 limodev Commit first development version
+4784170 2016-06-11 limodev first commit
