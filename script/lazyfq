@@ -78,15 +78,15 @@ hypnotoad lazyfq
 
 Check if the server is responding:
 
-curl -s localhost:3000/
+curl -s localhost:8080/
 
 Check if provider is existent (1 => true, null => false):
 
-curl -s localhost:3000/finance/yahoo
+curl -s localhost:8080/finance/yahoo
 
 Get e.g. apple quote:
 
-curl -s localhost:3000/finance/yahoo/AAPL
+curl -s localhost:8080/finance/yahoo/AAPL
 
 =head1 SEE ALSO
 
