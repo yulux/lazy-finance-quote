@@ -1,6 +1,14 @@
-aea23ef 2016-06-13 limodev (HEAD, master) Fix documentation
+355f5f6 2016-06-14 limodev (HEAD, origin/master, master) Add git attributes
+b9ecb8f 2016-06-13 limodev Prereq note
+b409152 2016-06-13 limodev Camel
+09fbf16 2016-06-13 limodev Doc fix, what I am
+5b5037f 2016-06-13 limodev Doc remove comment
+66157b2 2016-06-13 limodev Doc fix
+2b675f9 2016-06-13 limodev Because of dependencies
+7a3d27b 2016-06-13 limodev Remove dollar sign from README.md
+aea23ef 2016-06-13 limodev Fix documentation
 8f75698 2016-06-13 limodev Update Changes
-c73a51e 2016-06-13 limodev (origin/master) More basic tests
+c73a51e 2016-06-13 limodev More basic tests
 a5f419d 2016-06-13 limodev Fix documentation
 7323244 2016-06-13 limodev Fix documentation
 8a8ec47 2016-06-13 limodev Fix documentation
