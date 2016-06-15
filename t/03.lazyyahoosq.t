@@ -12,7 +12,6 @@ require "$FindBin::Bin/../script/lazyyahoosq";
 my $default_symbol   = 'AAPL';
 my $default_provider = 'yahoo';
 
-
 # HTML/XML
 ## ok('../script/lazyyahoosq -t', 'show symtab');
 
