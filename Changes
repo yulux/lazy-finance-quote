@@ -1,5 +1,7 @@
-a7fe5eb 2016-06-15 limodev (HEAD, master) New executable layahoosq
-4d33fca 2016-06-15 limodev (origin/master) Actual Changes
+6bc148b 2016-06-15 limodev (HEAD, master) Test installation without Catmandu
+e002539 2016-06-15 limodev (origin/master) Actual Changes
+a7fe5eb 2016-06-15 limodev New executable layahoosq
+4d33fca 2016-06-15 limodev Actual Changes
 642fd54 2016-06-15 limodev Command line script for query api directly and tidy things
 2f4ba28 2016-06-14 limodev If we use hypnotoad the listening port is 8080
 3b17099 2016-06-14 limodev Where is the git hook?
