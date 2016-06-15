@@ -1,4 +1,6 @@
-99d4e00 2016-06-15 limodev (HEAD, origin/master, master) Add namespace::autoclean to Makefile.PL
+d6f3849 2016-06-15 limodev (HEAD, master) Fix perldoc
+3df9cd9 2016-06-15 limodev (origin/master) New changes
+99d4e00 2016-06-15 limodev Add namespace::autoclean to Makefile.PL
 dbd2b26 2016-06-15 limodev New changes
 5de36d9 2016-06-15 limodev New changes
 31af345 2016-06-15 limodev Cleanup
