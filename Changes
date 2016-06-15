@@ -1,5 +1,12 @@
-8facd48 2016-06-15 limodev (HEAD, master) New documentation
-d3540f6 2016-06-15 limodev (origin/master) New changes
+fb8326e 2016-06-15 limodev (HEAD, origin/master, master) Fix README.md
+820e3b9 2016-06-15 limodev Fix README.md
+2b80b23 2016-06-15 limodev Basic tests for lazyyahoosq
+c62d17e 2016-06-15 limodev Rename direct client binary to lazyyahoosq
+f30cc2b 2016-06-15 limodev Add very basic test for new client executable lazyyahoosq
+7f07cf6 2016-06-15 limodev Renamed layahoosq to lazyyahoosq
+fc5950d 2016-06-15 limodev New changes
+8facd48 2016-06-15 limodev New documentation
+d3540f6 2016-06-15 limodev New changes
 6bc148b 2016-06-15 limodev Test installation without Catmandu
 e002539 2016-06-15 limodev Actual Changes
 a7fe5eb 2016-06-15 limodev New executable layahoosq
