@@ -27,7 +27,7 @@
 
 ## Direct Client CLI Interface
 
-  layahoosq -s GE -s GOOGL -s AAPL -f n -f s6 -f a -f b -c
+  lazyyahoosq -s GE -s GOOGL -s AAPL -f n -f s6 -f a -f b -c
   name,revenue,ask,bid
   "General Electric Company Common",117.65B,30.60,30.59
   "Alphabet Inc.",77.99B,732.81,732.30
@@ -35,7 +35,7 @@
 
 ## Show available format parameters
 
-  layahoosq -d
+  lazyyahoosq -d
 
   ...
   last_trade_realtime_with_time, k1
