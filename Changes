@@ -1,5 +1,7 @@
-ff7d531 2016-06-15 limodev (HEAD, master) Cleanup
-40f4d84 2016-06-15 limodev (origin/master) New changes
+04632ec 2016-06-15 limodev (HEAD, master) Note for non-root
+0b0d3e4 2016-06-15 limodev (origin/master) New changes
+ff7d531 2016-06-15 limodev Cleanup
+40f4d84 2016-06-15 limodev New changes
 d6f3849 2016-06-15 limodev Fix perldoc
 3df9cd9 2016-06-15 limodev New changes
 99d4e00 2016-06-15 limodev Add namespace::autoclean to Makefile.PL
