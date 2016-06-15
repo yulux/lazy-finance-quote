@@ -1,5 +1,7 @@
-6bc148b 2016-06-15 limodev (HEAD, master) Test installation without Catmandu
-e002539 2016-06-15 limodev (origin/master) Actual Changes
+8facd48 2016-06-15 limodev (HEAD, master) New documentation
+d3540f6 2016-06-15 limodev (origin/master) New changes
+6bc148b 2016-06-15 limodev Test installation without Catmandu
+e002539 2016-06-15 limodev Actual Changes
 a7fe5eb 2016-06-15 limodev New executable layahoosq
 4d33fca 2016-06-15 limodev Actual Changes
 642fd54 2016-06-15 limodev Command line script for query api directly and tidy things
