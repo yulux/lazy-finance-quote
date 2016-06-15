@@ -1,5 +1,7 @@
-7c08567 2016-06-15 limodev (HEAD, master) Fix README.md
-d8f8c3f 2016-06-15 limodev (origin/master) New changes
+37f080c 2016-06-15 limodev (HEAD, master) API change notice
+264b797 2016-06-15 limodev (origin/master) New changes
+7c08567 2016-06-15 limodev Fix README.md
+d8f8c3f 2016-06-15 limodev New changes
 04632ec 2016-06-15 limodev Note for non-root
 0b0d3e4 2016-06-15 limodev New changes
 ff7d531 2016-06-15 limodev Cleanup
