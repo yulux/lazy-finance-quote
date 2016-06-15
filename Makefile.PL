@@ -38,6 +38,6 @@ WriteMakefile(
     'CryptX' => '0.036',
     'JSON::XS' => '3.02',
   },
-  EXE_FILES => ['script/lazyfq', 'script/layahoosq'],
+  EXE_FILES => ['script/lazyfq', 'script/lazyyahoosq'],
   test => {TESTS => 't/*.t t/*/*.t'}
 );
