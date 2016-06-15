@@ -1,4 +1,5 @@
-2f4ba28 2016-06-14 limodev (HEAD, origin/master, master) If we use hypnotoad the listening port is 8080
+642fd54 2016-06-15 limodev (HEAD, master) Command line script for query api directly and tidy things
+2f4ba28 2016-06-14 limodev (origin/master) If we use hypnotoad the listening port is 8080
 3b17099 2016-06-14 limodev Where is the git hook?
 355f5f6 2016-06-14 limodev Add git attributes
 b9ecb8f 2016-06-13 limodev Prereq note
