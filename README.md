@@ -8,6 +8,7 @@
 
 ## Prepare Perl environment from scratch
 
+```
 	cd ~
 	\curl -L https://install.perlbrew.pl | bash
 	echo "source ~/perl5/perlbrew/etc/bashrc" >> .bashrc
@@ -20,21 +21,27 @@
 	perlbrew list
 	* perl-5.20.3
 	perlbrew install-cpanm
+```
 
 ## Install app with cpanm
 
+```
 	cpanm https://github.com/yulux/lazy-finance-quote.git
+```
 
 ## Direct Client CLI Interface
 
+```
   lazyyahoosq -s GE -s GOOGL -s AAPL -f n -f s6 -f a -f b -c
   name,revenue,ask,bid
   "General Electric Company Common",117.65B,30.60,30.59
   "Alphabet Inc.",77.99B,732.81,732.30
   "Apple Inc.",227.54B,98.02,98.01
+```
 
 ## Show available format parameters
 
+```
   lazyyahoosq -d
 
   ...
@@ -49,6 +56,7 @@
   ask, a
   earnings_per_share, e
   ...
+```
   
 ## Server application (in development)
 
