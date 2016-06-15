@@ -30,6 +30,7 @@ WriteMakefile(
   PREREQ_PM => {
     'Mojolicious' => '6.64',
     'Mouse' => 'v2.4.5',
+    'MouseX::NativeTraits' => '1.09',
     ## 'Catmandu' => '1.0201',
     ## 'Catmandu::Store::DBI' => '0.0506',
     'XML::Simple' => '2.22',
