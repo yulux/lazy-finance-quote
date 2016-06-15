@@ -9,53 +9,54 @@
 ## Prepare Perl environment from scratch
 
 ```
-	cd ~
-	\curl -L https://install.perlbrew.pl | bash
-	echo "source ~/perl5/perlbrew/etc/bashrc" >> .bashrc
-	source ~/perl5/perlbrew/etc/bashrc
-	perlbrew -n install perl-5.20.3
-	tail -f ~/perl5/perlbrew/build.perl-5.20.3.log
-	perlbrew list
-	  perl-5.20.3
-	perlbrew switch perl-5.20.3
-	perlbrew list
-	* perl-5.20.3
-	perlbrew install-cpanm
+cd ~
+\curl -L https://install.perlbrew.pl | bash
+echo "source ~/perl5/perlbrew/etc/bashrc" >> .bashrc
+source ~/perl5/perlbrew/etc/bashrc
+perlbrew -n install perl-5.20.3
+tail -f ~/perl5/perlbrew/build.perl-5.20.3.log
+perlbrew list
+  perl-5.20.3
+perlbrew switch perl-5.20.3
+perlbrew list
+* perl-5.20.3
+perlbrew install-cpanm
 ```
 
 ## Install app with cpanm
 
 ```
-	cpanm https://github.com/yulux/lazy-finance-quote.git
+cpanm https://github.com/yulux/lazy-finance-quote.git
 ```
 
 ## Direct Client CLI Interface
 
 ```
-  lazyyahoosq -s GE -s GOOGL -s AAPL -f n -f s6 -f a -f b -c
-  name,revenue,ask,bid
-  "General Electric Company Common",117.65B,30.60,30.59
-  "Alphabet Inc.",77.99B,732.81,732.30
-  "Apple Inc.",227.54B,98.02,98.01
+lazyyahoosq -s GE -s GOOGL -s AAPL -f n -f s6 -f a -f b -c
+
+name,revenue,ask,bid
+"General Electric Company Common",117.65B,30.60,30.59
+"Alphabet Inc.",77.99B,732.81,732.30
+"Apple Inc.",227.54B,98.02,98.01
 ```
 
 ## Show available format parameters
 
 ```
-  lazyyahoosq -d
+lazyyahoosq -d
 
-  ...
-  last_trade_realtime_with_time, k1
-  bid_size, b6
-  last_trade_size, k3
-  dividend_per_share, d
-  last_trade_with_time, l
-  dividend_pay_date, r1
-  ebitda, j4
-  ask_size, a5
-  ask, a
-  earnings_per_share, e
-  ...
+...
+last_trade_realtime_with_time, k1
+bid_size, b6
+last_trade_size, k3
+dividend_per_share, d
+last_trade_with_time, l
+dividend_pay_date, r1
+ebitda, j4
+ask_size, a5
+ask, a
+earnings_per_share, e
+...
 ```
   
 ## Server application (in development)
