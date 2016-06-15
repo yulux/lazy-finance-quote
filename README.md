@@ -6,7 +6,7 @@
 
   libxml2-dev, curl, and maybe more
 
-## Prepare Perl environment from scratch
+## Prepare (non-root) Perl environment from scratch
 
 ```
 cd ~
