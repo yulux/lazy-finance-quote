@@ -33,6 +33,7 @@ WriteMakefile(
     'MouseX::NativeTraits' => '1.09',
     ## 'Catmandu' => '1.0201',
     ## 'Catmandu::Store::DBI' => '0.0506',
+    'namespace::autoclean' => '0.28',
     'XML::Simple' => '2.22',
     'Hash::Flatten' => '1.19',
     'CryptX' => '0.036',
