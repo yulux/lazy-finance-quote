@@ -1,0 +1,419 @@
+#!/usr/bin/env perl
+
+package Lazy::Finance::Quote::Yahoo::Format;
+use Mouse::Role;
+use open qw(:locale);
+use utf8;
+use warnings qw(all);
+
+has 'csvf' => (
+  traits  => ['Hash'],
+  is      => 'ro',
+  isa     => 'HashRef[Str]',
+  default => sub {
+    {
+      a  => 'ask',
+      b  => 'bid',
+      b2 => 'ask_realtime',
+      b3 => 'bid_realtime',
+      p  => 'previous_close',
+      o  => 'open',
+      y  => 'dividend_yield',
+      d  => 'dividend_per_share',
+      r1 => 'dividend_pay_date',
+      q  => 'ex_dividend_date',
+      c1 => 'change',
+      c  => 'change_percentage_change',
+      c6 => 'change_realtime',
+      k2 => 'change_percent',
+      p2 => 'change_in_percent',
+      d1 => 'last_trade_date',
+      d2 => 'trade_date',
+      t1 => 'last_trade_time',
+      c8 => 'after_hours_change',
+      c3 => 'comission',
+      g  => 'days_low',
+      h  => 'days_high',
+      k1 => 'last_trade_realtime_with_time',
+      l  => 'last_trade_with_time',
+      l1 => 'last_trade_price_only',
+      t8 => 'one_year_target_price',
+      m5 => 'change_from_200_day_moving_average',
+      m6 => 'percent_change_from_200_day_moving_average',
+      m7 => 'change_from_50_day_moving_average',
+      m8 => 'percent_change_from_50_day_moving_average',
+      m3 => '50_day_moving_average',
+      m4 => '200_day_moving_average',
+      w1 => 'days_value_change',
+      w4 => 'days_value_change_realtime',
+      p1 => 'price_paid',
+      m  => 'days_range',
+      m2 => 'days_range_realtime',
+      g1 => 'holding_gain_percent',
+      g3 => 'annualized_gain',
+      g4 => 'holdings_gain',
+      g5 => 'holdings_gain_percent_realtime',
+      g6 => 'holdings_gain_realtime',
+      t7 => 'ticker_trend',
+      t6 => 'trade_links',
+      5  => 'order_book_realtime',
+      l2 => 'high_limit',
+      l3 => 'low_limit',
+      v1 => 'holdings_value',
+      v7 => 'holdings_value_realtime',
+      s6 => 'revenue',
+      k  => '52_week_high',
+      j  => '52_week_low',
+      j5 => 'change_from_52_week_low',
+      k4 => 'change_from_52_week_high',
+      j6 => 'percent_change_from_52_week_low',
+      k5 => 'percent_change_from_52_week_high',
+      w  => '52_week_range',
+      i  => 'more_info',
+      j1 => 'market_capitalization',
+      j3 => 'market_capitalization_realtime',
+      f6 => 'float_shares',
+      n  => 'name',
+      n4 => 'notes',
+      s  => 'symbol',
+      s1 => 'shares_owned',
+      x  => 'stock_exchange',
+      j2 => 'shares_outstanding',
+      v  => 'volume',
+      a5 => 'ask_size',
+      b6 => 'bid_size',
+      k3 => 'last_trade_size',
+      a2 => 'average_daily_volume',
+      e  => 'earnings_per_share',
+      e7 => 'eps_estimate_current_year',
+      e8 => 'eps_estimate_next_year',
+      e9 => 'eps_estimate_next_quarter',
+      b4 => 'book_value',
+      j4 => 'ebitda',
+      p5 => 'price_sales',
+      p6 => 'price_book',
+      r  => 'p_e_ratio',
+      r2 => 'pe_ratio_realtime',
+      r5 => 'peg_ratio',
+      r6 => 'price_eps_estimate_current_year',
+      r7 => 'price_eps_estimate_next_year',
+      s7 => 'short_ratio',
+    };
+  },
+  handles => {
+    csvf_set    => 'set',
+    csvf_get    => 'get',
+    csvf_has_no => 'is_empty',
+    csvf_num    => 'count',
+    csvf_delete => 'delete',
+    csvf_pairs  => 'kv',
+  },
+);
+
+has 'showcol' => (
+  traits  => ['Bool'],
+  is      => 'ro',
+  isa     => 'Bool',
+  default => 0,
+);
+
+sub get_default_values {
+  my $self = shift;
+  foreach my $i ($self->csvf_pairs) {
+    print "$i->[1], $i->[0]\n";
+  }
+}
+
+no Mouse;
+1;
+
+## foreach my $f (keys %$yahoo_format) {
+##   print "==> format option: $yahoo_format->{$f}\n";
+## };
+
+package Lazy::Finance::Quote::Yahoo::Option;
+use Mouse::Role;
+use MouseX::NativeTraits::ArrayRef;
+
+my @option = ('symbol', 'format');
+
+foreach my $o (@option) {
+  has $o => (
+    traits  => ['Array'],
+    is      => 'ro',
+    isa     => 'ArrayRef[Str]',
+    default => sub { [] },
+    handles => {
+      $o . _all    => 'elements',
+      $o . _add    => 'push',
+      $o . _map    => 'map',
+      $o . _filter => 'grep',
+      $o . _find   => 'first',
+      $o . _get    => 'get',
+      $o . _join   => 'join',
+      $o . _count  => 'count',
+      $o . _has    => 'count',
+      $o . _has_no => 'is_empty',
+      $o . _sorted => 'sort',
+    },
+  );
+}
+
+no Mouse;
+1;
+
+package Lazy::Finance::Quote::Yahoo::UA;
+use Mouse::Role;
+
+has 'stock_url' => (
+  traits => ['Array'],
+  is     => 'rw',
+  isa    => 'ArrayRef[Str]',
+  default =>
+    sub { ['http://download.finance.yahoo.com/d/quotes.csv?s=GE&f=s6&e=.csv'] },
+  handles => {
+    all_options    => 'elements',
+    add_option     => 'push',
+    map_options    => 'map',
+    filter_options => 'grep',
+    find_option    => 'first',
+    get_option     => 'get',
+    join_options   => 'join',
+    count_options  => 'count',
+    has_options    => 'count',
+    has_no_options => 'is_empty',
+    sorted_options => 'sort',
+  },
+);
+
+has 'ua' => (
+  is         => 'ro',
+  isa        => 'Mojo::UserAgent',
+  lazy_build => 1,
+);
+
+has 'showurl' => (
+  traits  => ['Bool'],
+  is      => 'ro',
+  isa     => 'Bool',
+  default => 0,
+);
+
+sub _build_ua {
+  my $self = shift;
+  return Mojo::UserAgent->new(max_redirects => 5);
+}
+
+no Mouse;
+1;
+
+package Lazy::Finance::Quote::Yahoo::CLI;
+use Mouse;
+with 'Lazy::Finance::Quote::Yahoo::Option';
+with 'Lazy::Finance::Quote::Yahoo::Format';
+with 'Lazy::Finance::Quote::Yahoo::UA';
+use namespace::autoclean;
+use Data::Dumper;
+use Mojo::UserAgent;
+use Carp;
+
+## my @stock_url = Mojo::URL->new('http://download.finance.yahoo.com/d/quotes.csv?s=GE,AAPL&f=s6&e=.csv');
+
+# Limit parallel connections to 4
+my $max_conn = 4;
+# Keep track of active connections
+my $active = 0;
+
+my $quote_url_builder = sub {
+  my $self = shift;
+  foreach my $f (@{$self->format}) {
+    unless ($self->csvf_get($f)) {
+      croak "==> unknown symbol: [$f]";
+    }
+  }
+  my $cli_symbols = join(',', @{$self->symbol});
+  my $cli_format  = join('',  @{$self->format});
+  my $std_url
+    = [ 'http://download.finance.yahoo.com/d/quotes.csv?s='
+      . $cli_symbols . '&f='
+      . $cli_format
+      . '&e=.csv'
+    ];
+  print @{$std_url}, "\n" if ($self->showurl);
+
+  if ($self->showcol) {
+    my $c_header = [];
+    foreach my $f_item (@{$self->format}) {
+      push @{$c_header}, $self->csvf_get($f_item);
+    }
+    if ($c_header) {
+      print join(',', @{$c_header}), "\n";
+    }
+  }
+  if ($std_url) {
+    return $std_url;
+  }
+  croak "unable to build: [$std_url]";
+};
+
+sub get_quote {
+  my $self  = shift;
+  my $s_url = $self->$quote_url_builder;
+  ## print Dumper($self->stock_url);
+  if ($s_url) {
+    Mojo::IOLoop->recurring(
+      0 => sub {
+        for ($active + 1 .. $max_conn) {
+          return ($active or Mojo::IOLoop->stop)
+            unless my $url = shift @{$s_url};
+          ++$active;
+          $self->ua->get($url => \&get_callback);
+        }
+      });
+
+    # Start event loop if necessary
+    Mojo::IOLoop->start unless Mojo::IOLoop->is_running;
+  }
+}
+
+sub get_callback {
+  my (undef, $tx) = @_;
+  --$active;
+  return if not $tx->res->is_status_class(200);
+  # Request URL
+  my $url = $tx->req->url;
+  parse_url($url, $tx);
+  return;
+}
+
+sub parse_url {
+  my ($url, $tx) = @_;
+  foreach (split(/\n/, $tx->res->content->asset->slurp)) {
+    print "$_\n";
+  }
+}
+
+__PACKAGE__->meta->make_immutable;
+no Mouse;
+1;
+
+package main;
+
+use strict;
+use warnings;
+use Data::Dumper;
+use FindBin;
+use Pod::Usage;
+use Getopt::Long;
+
+my %conf_hash = ();
+
+GetOptions(\%conf_hash, 'symbol|s=s@', "format|f=s@", "showsym|d", "showurl|u",
+  "showcol|c", "help|h" => \&usage,)
+  || usage(1);
+
+sub usage {
+  pod2usage($_);
+  return;
+}
+
+## pod2usage("$0: please provide a symbol") unless ($conf_hash{symbol});
+
+my $obj_pm = Lazy::Finance::Quote::Yahoo::CLI->new(%conf_hash,);
+
+if ($conf_hash{symbol}) {
+  my $list = $obj_pm->get_quote;
+}
+
+if ($conf_hash{showsym}) {
+  $obj_pm->get_default_values;
+}
+
+
+## ===============================================================================
+
+=pod
+
+=encoding utf8
+
+=head1 NAME
+
+layahoosq
+
+=head1 SYNOPSIS
+
+  layahoosq [OPTIONS]
+
+  Options:
+    -help    (show usage)
+    -symbol  (stock quote symbol name)
+    -format  (csv format string)     
+    -showsym (show all known csv format options)     
+    -showurl (show GET request URL)
+    -showcol (show column names)
+
+=head1 OPTIONS
+
+=head2 --symbol|-s (Str)
+
+  --symbol 'AAPL'
+
+=head2 --format|-f (Str)
+
+  --format 's6'
+
+=head2 --showsym|-d (Bool)
+
+  --showsym
+
+=head2 --showurl|-u (Bool)
+
+  --showurl
+
+=head2 --showcol|-c (Bool)
+
+  --showcol
+
+=head1 EXAMPLES
+
+  Get all known (or unknown, untested) csv format options:
+  layahoosq -d
+  
+  ...
+  price_book, p6
+  holdings_gain_percent_realtime, g5
+  change_from_200_day_moving_average, m5
+  holdings_gain, g4
+  ...
+
+  Get revenue from Apple Inc., Nasdaq
+  layahoosq -s 'AAPL' -f 's6'
+
+  227.54B
+
+  Get output with column names:
+  layahoosq -s AAPL -s GOOGL -f n -f s6 -f a -f b -c
+
+  name,revenue,ask,bid
+  "Apple Inc.",227.54B,97.77,97.75
+  "Alphabet Inc.",77.99B,N/A,N/A
+
+  
+  Get Get request URL query string
+  layahoosq -s GE -s GOOGL -s AAPL -f n -f s6 -f a -f b -u
+
+  http://download.finance.yahoo.com/d/quotes.csv?s=GE,GOOGL,AAPL&f=ns6ab&e=.csv
+  "General Electric Company Common",117.65B,N/A,N/A
+  "Alphabet Inc.",77.99B,N/A,N/A
+  "Apple Inc.",227.54B,97.77,97.76
+
+=head1 DESCRIPTION
+
+B<layahoosq> get csv stock quotes from yahoo finance api
+
+=head1 AUTHOR
+
+B<Michael Kapp>
+
+=cut
+

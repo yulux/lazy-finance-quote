@@ -12,40 +12,38 @@ use Lazy::Finance::Quote;
 helper lfq => sub { state $lfq = Lazy::Finance::Quote->new };
 
 get '/' => sub {
-  my $c   = shift;
+  my $c = shift;
   return $c->render(
     json => {
       status => 'alive'
-    }
-  );
+    });
 };
 
 get '/finance/:provider' => sub {
-  my $c   = shift;
-  my $provider = $c->param('provider');
+  my $c             = shift;
+  my $provider      = $c->param('provider');
   my $provider_data = $c->lfq->get_id($provider);
   return $c->render(
     json => {
       provider => $provider_data
-    }
-  );
+    });
 };
 
 get '/finance/:yahoo/#symbol' => sub {
-  my $c   = shift;
+  my $c        = shift;
   my $provider = $c->param('yahoo');
   my $symbol   = $c->param('symbol');
   my $data     = $c->lfq->query($symbol);
   return $c->render(
     json => {
-      provider => $provider,
-      symbol => $symbol,
+      provider   => $provider,
+      symbol     => $symbol,
       time_stamp => time(),
-      data => $data}
-    );
+      data       => $data
+    });
 };
 
-app->secrets([random_string(64)]); 
+app->secrets([random_string(64)]);
 app->start;
 
 =encoding utf8
