@@ -1,4 +1,8 @@
-fb8326e 2016-06-15 limodev (HEAD, origin/master, master) Fix README.md
+31af345 2016-06-15 limodev (HEAD, master) Cleanup
+a71e136 2016-06-15 limodev (origin/master) Tidy tests
+3c76d53 2016-06-15 limodev Tidy tests
+ec8ac98 2016-06-15 limodev New changes
+fb8326e 2016-06-15 limodev Fix README.md
 820e3b9 2016-06-15 limodev Fix README.md
 2b80b23 2016-06-15 limodev Basic tests for lazyyahoosq
 c62d17e 2016-06-15 limodev Rename direct client binary to lazyyahoosq
