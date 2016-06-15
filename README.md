@@ -65,7 +65,7 @@ earnings_per_share, e
 ...
 ```
   
-## Server application (in development)
+## Server application (in development, API can/will change)
 
 ## Start app
 
