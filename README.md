@@ -29,6 +29,12 @@ perlbrew install-cpanm
 cpanm https://github.com/yulux/lazy-finance-quote.git
 ```
 
+## Read documentation
+
+```
+perldoc lazyyahoosq
+```
+
 ## Direct Client CLI Interface
 
 ```

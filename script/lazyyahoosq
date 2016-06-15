@@ -345,12 +345,12 @@ lazyyahoosq
   lazyyahoosq [OPTIONS]
 
   Options:
-    -help    (show usage)
-    -symbol  (stock quote symbol name)
-    -format  (csv format string)     
-    -showsym (show all known csv format options)     
-    -showurl (show GET request URL)
-    -showcol (show column names)
+    -help|-h    (show usage)
+    -symbol|-s  (stock quote symbol name)
+    -format|-f  (csv format string)     
+    -showsym|-d (show all known csv format options)     
+    -showurl|-u (show GET request URL)
+    -showcol|-c (show column names)
 
 =head1 OPTIONS
 
