@@ -228,7 +228,7 @@ my $quote_url_builder = sub {
   my $self = shift;
   foreach my $f (@{$self->format}) {
     unless ($self->csvf_get($f)) {
-      croak "==> unknown symbol: [$f]";
+      croak "==> unknown format: [$f]";
     }
   }
   my $cli_symbols = join(',', @{$self->symbol});
