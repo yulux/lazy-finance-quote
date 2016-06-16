@@ -399,7 +399,7 @@ lazyyahoosq
   "Alphabet Inc.",77.99B,N/A,N/A
 
   
-  Get Get request URL query string
+  Show GET request URL query string
   lazyyahoosq -s GE -s GOOGL -s AAPL -f n -f s6 -f a -f b -u
 
   http://download.finance.yahoo.com/d/quotes.csv?s=GE,GOOGL,AAPL&f=ns6ab&e=.csv
