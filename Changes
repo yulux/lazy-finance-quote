@@ -1,5 +1,7 @@
-e1ac729 2016-06-16 limodev (HEAD, master) We check known maybe unknown format options
-d431c16 2016-06-15 limodev (origin/master) New changes
+c8cc7ac 2016-06-16 limodev (HEAD, master) Doc fix
+54e3304 2016-06-16 limodev (origin/master) New changes
+e1ac729 2016-06-16 limodev We check known maybe unknown format options
+d431c16 2016-06-15 limodev New changes
 37f080c 2016-06-15 limodev API change notice
 264b797 2016-06-15 limodev New changes
 7c08567 2016-06-15 limodev Fix README.md
