@@ -24,7 +24,13 @@ before_install:
     - cd $BUILD_DIR
 install:
   - cpanm -n EV IO::Socket::Socks IO::Socket::SSL Net::DNS::Native Test::Pod Test::Pod::Coverage Mouse
+  - cpanm -n Devel::Cover::Report::Coveralls
   - cpanm -n --installdeps .
+script:
+    - PERL5OPT=-MDevel::Cover=+ignore,"prove",-coverage,statement,branch,condition,path,subroutine prove -lrs t
+    - cover
+after_success:
+    - cover -report coveralls
 sudo: false
 notifications:
 email: false
