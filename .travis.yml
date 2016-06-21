@@ -1,6 +1,6 @@
 language: perl
 perl:
-  - "5.24.0"
+  - "5.24"
   - "5.22"
   - "5.20"
   - "5.18"
@@ -15,6 +15,13 @@ env:
     - TEST_POD=1
     - TEST_SOCKS=1
     - TEST_TLS=1
+before_install:
+    - git clone git://github.com/haarg/perl-travis-helper
+    - source perl-travis-helper/init
+    - build-perl
+    - perl -V
+    - build-dist
+    - cd $BUILD_DIR
 install:
   - cpanm -n EV IO::Socket::Socks IO::Socket::SSL Net::DNS::Native Test::Pod Test::Pod::Coverage Mouse
   - cpanm -n --installdeps .
