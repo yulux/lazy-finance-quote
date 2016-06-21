@@ -23,7 +23,8 @@ before_install:
     - build-dist
     - cd $BUILD_DIR
 install:
-  - cpanm -n EV IO::Socket::Socks IO::Socket::SSL Net::DNS::Native Test::Pod Test::Pod::Coverage Mouse
+  - cpanm -n EV IO::Socket::Socks IO::Socket::SSL Net::DNS::Native Test::Pod Test::Pod::Coverage
+  - cpanm -n Mouse
   - cpanm -n Devel::Cover::Report::Coveralls
   - cpanm -n --installdeps .
 script:
