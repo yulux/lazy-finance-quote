@@ -127,10 +127,6 @@ sub get_default_values {
 no Mouse;
 1;
 
-## foreach my $f (keys %$yahoo_format) {
-##   print "==> format option: $yahoo_format->{$f}\n";
-## };
-
 package Lazy::Finance::Quote::Yahoo::Option;
 use Mouse::Role;
 use MouseX::NativeTraits::ArrayRef;
@@ -213,11 +209,10 @@ with 'Lazy::Finance::Quote::Yahoo::Option';
 with 'Lazy::Finance::Quote::Yahoo::Format';
 with 'Lazy::Finance::Quote::Yahoo::UA';
 use namespace::autoclean;
-use Data::Dumper;
 use Mojo::UserAgent;
 use Carp;
 
-## my @stock_url = Mojo::URL->new('http://download.finance.yahoo.com/d/quotes.csv?s=GE,AAPL&f=s6&e=.csv');
+## Mojo::URL->new('http://download.finance.yahoo.com/d/quotes.csv?s=GE,AAPL&f=s6&e=.csv');
 
 # Limit parallel connections to 4
 my $max_conn = 4;
@@ -259,7 +254,6 @@ my $quote_url_builder = sub {
 sub get_quote {
   my $self  = shift;
   my $s_url = $self->$quote_url_builder;
-  ## print Dumper($self->stock_url);
   if ($s_url) {
     Mojo::IOLoop->recurring(
       0 => sub {
@@ -270,7 +264,6 @@ sub get_quote {
           $self->ua->get($url => \&get_callback);
         }
       });
-
     # Start event loop if necessary
     Mojo::IOLoop->start unless Mojo::IOLoop->is_running;
   }
@@ -301,7 +294,6 @@ package main;
 
 use strict;
 use warnings;
-use Data::Dumper;
 use FindBin;
 use Pod::Usage;
 use Getopt::Long;
