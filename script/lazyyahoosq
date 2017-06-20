@@ -272,7 +272,7 @@ sub get_quote {
 sub get_callback {
   my (undef, $tx) = @_;
   --$active;
-  return if not $tx->res->is_status_class(200);
+  return if not $tx->res->is_success(200);
   # Request URL
   my $url = $tx->req->url;
   parse_url($url, $tx);
